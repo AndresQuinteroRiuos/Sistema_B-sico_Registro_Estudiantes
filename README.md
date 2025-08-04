@@ -1,18 +1,46 @@
-## Getting Started
+# Sistema Básico de Registro de Estudiantes
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descripción
 
-## Folder Structure
+Este proyecto es un sistema de gestión académica básico desarrollado en Java que permite registrar estudiantes, almacenar sus calificaciones, calcular promedios y determinar si han aprobado o reprobado. La aplicación funciona a través de una interfaz de línea de comandos, con un menú interactivo.
 
-The workspace contains two folders by default, where:
+## Funcionalidades
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **Registro de estudiantes**: Permite ingresar el nombre del estudiante y sus tres calificaciones.
+- **Visualización de datos**: Muestra la información del estudiante registrado.
+- **Cálculo de promedio**: Calcula el promedio de las tres calificaciones del estudiante.
+- **Determinación de aprobación**: Indica si el estudiante aprobó (promedio ≥ 60) o reprobó.
+- **Borrado de datos**: Permite eliminar los datos del estudiante actual.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Estructura del Proyecto
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+El proyecto está organizado en las siguientes carpetas:
 
-## Dependency Management
+- `src`: Contiene el código fuente de la aplicación
+  - `App.java`: Clase principal que implementa todas las funcionalidades
+- `bin`: Almacena los archivos compilados (.class)
+- `lib`: Destinada para gestionar dependencias de bibliotecas externas
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Cómo Ejecutar
+
+1. Asegúrate de tener Java instalado en tu sistema
+2. Compila el proyecto usando el comando: `javac -d bin src/App.java`
+3. Ejecuta la aplicación: `java -cp bin App`
+
+## Uso del Sistema
+
+Al iniciar la aplicación, se mostrará un menú con las siguientes opciones:
+
+1. **Registrar datos del estudiante**: Permite ingresar nombre y calificaciones
+2. **Mostrar datos del estudiante actual**: Muestra la información registrada
+3. **Calcular promedio y mostrar aprobación**: Calcula el promedio y determina si aprobó
+4. **Borrar datos del estudiante actual**: Elimina los datos registrados
+0. **Salir**: Finaliza la aplicación
+
+## Validaciones
+
+El sistema incluye validaciones para:
+- Nombres vacíos o nulos
+- Calificaciones fuera del rango 0-100
+- Entradas no numéricas
+
